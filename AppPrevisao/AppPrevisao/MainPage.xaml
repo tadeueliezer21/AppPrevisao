@@ -1,0 +1,50 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d"
+             x:Class="AppPrevisao.MainPage">
+
+
+    <StackLayout BackgroundColor="#FFF">
+        <Label Text="Previsão do Tempo - Xamarin"
+            FontSize="30"
+            Margin="30,30,0,0"/>
+        <Label Text="Informe o nome da cidade"
+                FontSize="Medium"
+                Margin="30,30,0,0"/>
+        <Entry x:Name="txtCidade"
+                Placeholder="Cidade"
+                Margin="30,0,30,0"/>
+        <Button Text="Visualizar previsão"
+                Margin="30,30,30,0"
+                BorderColor="Blue"
+                BackgroundColor="White"
+                TextColor="#4040ff"
+                BorderWidth="2"
+                CornerRadius="50"
+                Padding="20"
+                x:Name="btnPrevisao"
+                Clicked="btnPrevisao_Clicked"
+                />
+        <StackLayout Padding="30,50,10,10">
+            <Label Text="Local" FontAttributes="Bold"/>
+            <Label Text="{Binding title}"/>
+            <Label Text="Temperatura" FontAttributes="Bold"/>
+            <Label Text="{Binding temperature}" x:Name="lbTemp"/>
+            <Label Text="Veloc. Vento" FontAttributes="Bold"/>
+            <Label Text="{Binding wind}" x:Name="lbWind"/>
+            <Label Text="Humidade" FontAttributes="Bold"/>
+            <Label Text="{Binding humidity}" x:Name="lbHumidity"/>
+            <Label Text="Visibilidade" FontAttributes="Bold"/>
+            <Label Text="{Binding visibility}" x:Name="lbVisibility"/>
+            <Label Text="Nascer do sol" FontAttributes="Bold"/>
+            <Label Text="{Binding sunrise}" x:Name="lbSunrise"/>
+            <Label Text="Pôr do sol" FontAttributes="Bold" x:Name="lbSunset"/>
+            <Label Text="{Binding sunset}" />
+        </StackLayout>
+    </StackLayout>
+
+    
+</ContentPage>
